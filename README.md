@@ -5,6 +5,7 @@ This repository contains the code associated with the paper "Embedding orthogona
 The contents of this repository include: importing .lsm microscope images, filtering the processed images, tracking particles using Trackpy (found here -- [http://soft-matter.github.io/trackpy/v0.6.1/](http://soft-matter.github.io/trackpy/v0.6.1/)) and Parameter Extraction from Reconstruction of Images (PERI -- found here [https://github.com/peri-source/peri/tree/master](https://github.com/peri-source/peri/tree/master)), analysis of particle positions and configurations over time, and visualization of the results.
 
 Author Information
+
 Principal Investigator Contact Information
 Name: Eric Schwen
 Institution: Cornell University

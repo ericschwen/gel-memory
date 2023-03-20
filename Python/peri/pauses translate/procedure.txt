@@ -1,0 +1,12 @@
+After featuring u0 from initial and optimizing as much as i could with
+burn, polish, addsub, and runner.finish_state.
+
+Then follow procedure:
+
+# Translate state to u1.(runner.translate_featuring)
+# st = states.load('new state') # if i forgot to for the translate
+
+addsub.add_subtract(st)
+opt.burn(st, mode = 'burn', n_loop = 5, desc = '', fractol = 1e-3)
+opt.burn(st, mode = 'polish', n_loop = 3, desc = '')
+runner.finish_state(st)

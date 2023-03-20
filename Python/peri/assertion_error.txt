@@ -1,0 +1,62 @@
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mAssertionError[0m                            Traceback (most recent call last)
+[0;32m<ipython-input-2-9ba7be468163>[0m in [0;36m<module>[0;34m()[0m
+[0;32m----> 1[0;31m [0mrunner[0m[1;33m.[0m[0moptimize_from_initial[0m[1;33m([0m[0mst[0m[1;33m)[0m[1;33m[0m[0m
+[0m
+[0;32mC:\Users\Eric\Anaconda2\lib\site-packages\peri\runner.pyc[0m in [0;36moptimize_from_initial[0;34m(s, max_mem, invert, desc, rz_order, min_rad, max_rad)[0m
+[1;32m    362[0m     [0mRLOG[0m[1;33m.[0m[0minfo[0m[1;33m([0m[1;34m'Final polish:'[0m[1;33m)[0m[1;33m[0m[0m
+[1;32m    363[0m     d = opt.burn(s, mode='polish', n_loop=8, fractol=3e-4, desc=desc +
+[0;32m--> 364[0;31m             'addsub-polish', max_mem=max_mem, rz_order=rz_order, dowarn=False)
+[0m[1;32m    365[0m     [1;32mif[0m [1;32mnot[0m [0md[0m[1;33m[[0m[1;34m'converged'[0m[1;33m][0m[1;33m:[0m[1;33m[0m[0m
+[1;32m    366[0m         [0mRLOG[0m[1;33m.[0m[0mwarn[0m[1;33m([0m[1;34m'Optimization did not converge; consider re-running'[0m[1;33m)[0m[1;33m[0m[0m
+
+[0;32mC:\Users\Eric\Anaconda2\lib\site-packages\peri\opt\optimize.pyc[0m in [0;36mburn[0;34m(s, n_loop, collect_stats, desc, rz_order, fractol, errtol, mode, max_mem, include_rad, do_line_min, partial_log, dowarn)[0m
+[1;32m   2582[0m                 [0mdo_calc_size[0m[1;33m=[0m[0mTrue[0m[1;33m,[0m [0mrun_length[0m[1;33m=[0m[1;36m4[0m[1;33m,[0m [0meig_update[0m[1;33m=[0m[0mFalse[0m[1;33m,[0m[1;33m[0m[0m
+[1;32m   2583[0m                 [0mdamping[0m[1;33m=[0m[0mprtl_dmp[0m[1;33m,[0m [0mfractol[0m[1;33m=[0m[1;36m0.1[0m[1;33m*[0m[0mfractol[0m[1;33m,[0m [0mcollect_stats[0m[1;33m=[0m[1;33m[0m[0m
+[0;32m-> 2584[0;31m                 collect_stats, max_mem=max_mem, include_rad=include_rad)
+[0m[1;32m   2585[0m         [0mall_lp_stats[0m[1;33m.[0m[0mappend[0m[1;33m([0m[0mpstats[0m[1;33m)[0m[1;33m[0m[0m
+[1;32m   2586[0m         [1;32mif[0m [0mdesc[0m [1;32mis[0m [1;32mnot[0m [0mNone[0m[1;33m:[0m[1;33m[0m[0m
+
+[0;32mC:\Users\Eric\Anaconda2\lib\site-packages\peri\opt\optimize.pyc[0m in [0;36mdo_levmarq_all_particle_groups[0;34m(s, region_size, max_iter, damping, decrease_damp_factor, run_length, collect_stats, **kwargs)[0m
+[1;32m   2393[0m     lp = LMParticleGroupCollection(s, region_size=region_size, damping=damping,
+[1;32m   2394[0m             [0mrun_length[0m[1;33m=[0m[0mrun_length[0m[1;33m,[0m [0mdecrease_damp_factor[0m[1;33m=[0m[0mdecrease_damp_factor[0m[1;33m,[0m[1;33m[0m[0m
+[0;32m-> 2395[0;31m             get_cos=collect_stats, max_iter=max_iter, **kwargs)
+[0m[1;32m   2396[0m     [0mlp[0m[1;33m.[0m[0mdo_run_2[0m[1;33m([0m[1;33m)[0m[1;33m[0m[0m
+[1;32m   2397[0m     [1;32mif[0m [0mcollect_stats[0m[1;33m:[0m[1;33m[0m[0m
+
+[0;32mC:\Users\Eric\Anaconda2\lib\site-packages\peri\opt\optimize.pyc[0m in [0;36m__init__[0;34m(self, state, region_size, do_calc_size, max_mem, get_cos, save_J, **kwargs)[0m
+[1;32m   1972[0m         [0mself[0m[1;33m.[0m[0mmax_mem[0m [1;33m=[0m [0mmax_mem[0m[1;33m[0m[0m
+[1;32m   1973[0m [1;33m[0m[0m
+[0;32m-> 1974[0;31m         [0mself[0m[1;33m.[0m[0mreset[0m[1;33m([0m[0mdo_calc_size[0m[1;33m=[0m[0mdo_calc_size[0m[1;33m)[0m[1;33m[0m[0m
+[0m[1;32m   1975[0m [1;33m[0m[0m
+[1;32m   1976[0m     def reset(self, new_region_size=None, do_calc_size=True, new_damping=None,
+
+[0;32mC:\Users\Eric\Anaconda2\lib\site-packages\peri\opt\optimize.pyc[0m in [0;36mreset[0;34m(self, new_region_size, do_calc_size, new_damping, new_max_mem)[0m
+[1;32m   1998[0m         [1;32mif[0m [0mdo_calc_size[0m[1;33m:[0m[1;33m[0m[0m
+[1;32m   1999[0m             self.region_size = calc_particle_group_region_size(self.state,
+[0;32m-> 2000[0;31m                     region_size=self.region_size, max_mem=self.max_mem)
+[0m[1;32m   2001[0m         [0mself[0m[1;33m.[0m[0mstats[0m [1;33m=[0m [1;33m[[0m[1;33m][0m[1;33m[0m[0m
+[1;32m   2002[0m         self.particle_groups = separate_particles_into_groups(self.state,
+
+[0;32mC:\Users\Eric\Anaconda2\lib\site-packages\peri\opt\optimize.pyc[0m in [0;36mcalc_particle_group_region_size[0;34m(s, region_size, max_mem, **kwargs)[0m
+[1;32m    378[0m [1;33m[0m[0m
+[1;32m    379[0m     [0mim_shape[0m [1;33m=[0m [0ms[0m[1;33m.[0m[0moshape[0m[1;33m.[0m[0mshape[0m[1;33m[0m[0m
+[0;32m--> 380[0;31m     [1;32mif[0m [0mcalc_mem_usage[0m[1;33m([0m[0mregion_size[0m[1;33m)[0m [1;33m>[0m [0mmax_mem[0m[1;33m:[0m[1;33m[0m[0m
+[0m[1;32m    381[0m         while ((calc_mem_usage(region_size) > max_mem) and
+[1;32m    382[0m                 np.any(region_size > 2)):
+
+[0;32mC:\Users\Eric\Anaconda2\lib\site-packages\peri\opt\optimize.pyc[0m in [0;36mcalc_mem_usage[0;34m(region_size)[0m
+[1;32m    364[0m         [0mrs[0m [1;33m=[0m [0mnp[0m[1;33m.[0m[0marray[0m[1;33m([0m[0mregion_size[0m[1;33m)[0m[1;33m[0m[0m
+[1;32m    365[0m         particle_groups = separate_particles_into_groups(s, region_size=
+[0;32m--> 366[0;31m                 rs.tolist(), **kwargs)
+[0m[1;32m    367[0m         [1;31m# The actual mem usage is the max of the memory usage of all the[0m[1;33m[0m[1;33m[0m[0m
+[1;32m    368[0m         [1;31m# particle groups. However this is too slow. So instead we use the[0m[1;33m[0m[1;33m[0m[0m
+
+[0;32mC:\Users\Eric\Anaconda2\lib\site-packages\peri\opt\optimize.pyc[0m in [0;36mseparate_particles_into_groups[0;34m(s, region_size, bounds, doshift)[0m
+[1;32m    317[0m         [1;32mif[0m [0mgroups[0m[1;33m[[0m[0mi[0m[1;33m][0m[1;33m.[0m[0msize[0m [1;33m==[0m [1;36m0[0m[1;33m:[0m[1;33m[0m[0m
+[1;32m    318[0m             [0mgroups[0m[1;33m.[0m[0mpop[0m[1;33m([0m[0mi[0m[1;33m)[0m[1;33m[0m[0m
+[0;32m--> 319[0;31m     [1;32massert[0m [0m_check_groups[0m[1;33m([0m[0ms[0m[1;33m,[0m [0mgroups[0m[1;33m)[0m[1;33m[0m[0m
+[0m[1;32m    320[0m     [1;32mreturn[0m [0mgroups[0m[1;33m[0m[0m
+[1;32m    321[0m [1;33m[0m[0m
+
+[0;31mAssertionError[0m: 

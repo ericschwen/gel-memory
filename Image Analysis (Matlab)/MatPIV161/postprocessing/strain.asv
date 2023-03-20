@@ -1,0 +1,25 @@
+function [epsxy,eta]=getstrain_5pt(x,y,u,v,method)
+% STRAIN - calculate shear and  normal strain from 2D velocity field
+%
+% [epsxy,eta]=strain(x,y,u,v,method)
+% 
+% This function calculates differential quantities from a given
+% flowfield  x y u v. METHOD should be one of 'circulation', 
+% 'richardson', 'leastsq' or 'centered'. Default is least squares.
+% 'centered' uses the MATLAB function CURL.
+
+% Jan 03, 2002
+% Copyright Kristian Sveen, jks@math.uio.no
+% for use with MatPIV 1.6
+% Distributed "as is", under the terms of the GNU general public license
+
+
+    for i=3:1:size(x,2)-2
+        for j=3:1:size(x,1)-2
+            epsxy(j-2,i-2)= -(2*v(j,i+2) +v(j,i+1) -v(j,i-1) -2*v(j,i-2))/(10*DeltaX)...
+                - (2*u(j+2,i) +u(j+1,i) -u(j-1,i) -2*u(j-2,i))/(10*DeltaY);
+            eta(j-2,i-2)= (2*v(j,i+2) +v(j,i+1) -v(j,i-1) -2*v(j,i-2))/(10*DeltaY)...
+                + (2*u(j+2,i) +u(j+1,i) -u(j-1,i) -2*u(j-2,i))/(10*DeltaX);
+        end
+    end
+    

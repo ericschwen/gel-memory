@@ -1,0 +1,40 @@
+1-16-18
+
+New ilm working about the same as old for 128x128 data. Not great
+locating, but could be the image as well. I should try a different
+area.
+
+256x256 not very clean right now. Maybe just not optimized currently,
+but may need to change parameters.
+
+Ideas:
+I'm thinking for the next couple days I might want to get 128x128x50
+working ok and get a few subsequent images processed that I can analyze
+while I work on finding the best peri parameters for using on larger
+images.
+
+I could also just run that analysis on the old images from the previous
+data set that I have working ok already? But I do want the larger field
+of view. Not sure what I can acomplish by Friday. Should go in tomorrow
+and make sure I talk to Meera.
+
+Code currently running:
+1) Optimize 128x128x50 new ilm further. Attempting to get one good one
+working
+
+1.5) Translated featuring to u1 in 128x128x50 new ilm. Looks pretty good
+except for a couple of obviously misfeatured particles.
+
+2) TO DO: Center image 128x128x50-- Try different part of image to see 
+if there is just one segment not working.
+
+3) 512x512x50 -- Working on polishing initial optimization for a full
+siz image. Not very confident on this working though.
+	--it looks kind of rough after first making. Would need a fair bit
+more polishing.
+
+4) TO DO: 128x128x100 -- Get larger image up so I can run larger analysis.
+
+5) 64x64x100 first to get psf right? Probably good.
+	-- did some orthomanipulating to work on fixing misfeatured parts.
+

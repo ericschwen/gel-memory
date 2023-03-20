@@ -1,0 +1,20 @@
+64x64x100
+
+Started: 1-16-18
+Data: 1-6-18
+
+Using p150 u0 for now.
+
+procedure:
+make state
+emod_optimize_from_initial
+
+# basic optimization	
+for i in range(5):
+	opt.burn(st, mode='burn', n_loop=3, desc='', fractol=1e-3)
+	addsub.add_subtract(st)
+	opt.burn(st, mode='polish', n_loop=3, desc='')
+
+A few more rounds of burn, polish, and add_subtract with manual
+OrhtoManipulator adding and subtracting in between
+(getting the psf polished I hope).

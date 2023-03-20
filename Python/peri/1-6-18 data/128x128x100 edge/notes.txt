@@ -1,0 +1,13 @@
+64x64x100
+
+Started: 1-16-18
+Data: 1-6-18
+
+Using p150 u0 for now.
+
+procedure:
+make state
+
+set new ilm from 64x64x100 image
+
+emod_optimize_from_initial

@@ -6,15 +6,14 @@ The contents of this repository include: importing .lsm microscope images, filte
 
 Author Information
 
-Principal Investigator Contact Information
-Name: Eric Schwen
-Institution: Cornell University
-Address: C7 Clark Hall
-Email: ems445@cornell.edu
+Principal Investigator Contact Information  
+Name: Eric Schwen  
+Institution: Cornell University  
+Address: C7 Clark Hall  
+Email: ems445@cornell.edu  
 
-Associate or Co-investigator Contact Information
-
-Name: Itai Cohen
-Institution: Cornell University
-Address: 509 Clark Hall
-Email: itai.cohen@cornell.edu
+Associate or Co-investigator Contact Information  
+Name: Itai Cohen  
+Institution: Cornell University  
+Address: 509 Clark Hall  
+Email: itai.cohen@cornell.edu  

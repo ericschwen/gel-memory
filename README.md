@@ -18,4 +18,4 @@ Institution: Cornell University
 Address: 509 Clark Hall  
 Email: itai.cohen@cornell.edu  
 
-Note: This repository contains all of my code from my experimenting and iterating on this project over a couple of years. The individual files are commented, but the folders are not well structured for guiding another user through the workflow of processing a set of microscopy data. I wrapped up this project a couple of years ago and don't anticipate returing to reorganize it in the near future. Feel free to contact me with any questions.
+Note: This repository contains all of my code from my experimenting and iterating on this project over a couple of years. The individual files are commented, but the folders are not well structured for guiding another user through the workflow of processing and analyzing set of microscopy data. I wrapped up this project a couple of years ago and don't anticipate returing to reorganize it in the near future. Feel free to contact me with any questions.
